@@ -92,13 +92,6 @@ public class JDPreguntas extends javax.swing.JDialog {
             bloquear  = true;
             txtRpta.setText("");
             this.dispose();
-        }else{
-            //contenedor.add(obj);
-            //obj.setVisible(true);
-            //JDTest.desbloquearChk(valorChk);
-            bloquear=false;
-            txtRpta.setText("");
-            this.dispose();
         }
     }//GEN-LAST:event_btnEnviarActionPerformed
 
