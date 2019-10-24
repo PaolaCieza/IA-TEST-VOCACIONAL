@@ -466,11 +466,11 @@ public class JDTest extends javax.swing.JDialog {
     private void llamarForm(int valor){
         obj.tipo(valor);
         obj.setVisible(true);
-        if(obj.getBloquear()){
-            bloquearChk(obj.getRpta());
-        }else{
-            desbloquearChk(obj.getRpta());
-        }
+//        if(obj.getBloquear()){
+//            bloquearChk(obj.getRpta());
+//        }else{
+//            desbloquearChk(obj.getRpta());
+//        }
     }
     
     public static void bloquearChk(int chk){ 

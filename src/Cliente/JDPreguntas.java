@@ -82,26 +82,20 @@ public class JDPreguntas extends javax.swing.JDialog {
         System.out.println(rpta);
         if (!(txtRpta.getText().equalsIgnoreCase(rpta))){
             JDTest.bloquearChk(valorChk);
-            txtRpta.setText("");
+             //bloquear  = false;
+             txtRpta.setText("");
             this.dispose();
         }else{
             JDTest.desbloquearChk(valorChk);
             //contenedor.add(obj);
             //FrmTest.setVisible(true);
             //JDTest.bloquearChk(valorChk);
-            bloquear  = true;
+            //bloquear  = true;
             txtRpta.setText("");
             this.dispose();
         }
     }//GEN-LAST:event_btnEnviarActionPerformed
 
-    public int getRpta(){
-        return valorChk;
-    }
-    
-    public boolean getBloquear(){
-        return bloquear;
-    }
     /**
      * @param args the command line arguments
      */
@@ -194,6 +188,7 @@ public class JDPreguntas extends javax.swing.JDialog {
             case 5:
                 url = new ImageIcon ("src\\imagenes\\Preguntas\\domhabla\\1.jpg");
                 System.out.println(url);
+                System.out.println(valor);
                 lblFoto.setIcon(url);
                 rpta= "B";
                 break;
@@ -332,6 +327,7 @@ public class JDPreguntas extends javax.swing.JDialog {
 
                 url = new ImageIcon ("src\\imagenes\\Preguntas\\filosofia\\"+ejer+".PNG");
                 System.out.println(url);
+                System.out.println(ejer);
                 lblFoto.setIcon(url);
                 if (ejer == 1){
                     rpta = "2";   
