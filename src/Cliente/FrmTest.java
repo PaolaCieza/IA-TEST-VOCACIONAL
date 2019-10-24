@@ -8,10 +8,12 @@ package Cliente;
 import static Cliente.FrmPrincipal.contenedor;
 import Negocio.Registro;
 import Negocio.Test;
+import java.awt.Checkbox;
 import java.util.Map;
 import java.util.Vector;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JCheckBox;
 import javax.swing.JOptionPane;
 import javax.swing.event.ChangeEvent;
 import javax.swing.table.DefaultTableModel;
@@ -54,6 +56,8 @@ public class FrmTest extends javax.swing.JInternalFrame {
         jButton1 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         txtemail = new javax.swing.JTextField();
+        chk7 = new javax.swing.JCheckBox();
+        chk8 = new javax.swing.JCheckBox();
 
         setClosable(true);
         setIconifiable(true);
@@ -112,6 +116,20 @@ public class FrmTest extends javax.swing.JInternalFrame {
 
         jLabel2.setText("E-mail:");
 
+        chk7.setText("Buen vocabulario");
+        chk7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                chk7ActionPerformed(evt);
+            }
+        });
+
+        chk8.setText("Razonamiento Matematico");
+        chk8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                chk8ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -127,18 +145,22 @@ public class FrmTest extends javax.swing.JInternalFrame {
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 325, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
+            .addGroup(layout.createSequentialGroup()
+                .addGap(131, 131, 131)
+                .addComponent(jButton1)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(chk6)
+                    .addComponent(chk8)
                     .addComponent(chk4)
                     .addComponent(chk3)
                     .addComponent(chk2)
                     .addComponent(chk1)
                     .addComponent(chk5)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(21, 21, 21)
-                        .addComponent(jButton1)))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(chk7, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(chk6, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addGap(85, 85, 85))
         );
         layout.setVerticalGroup(
@@ -162,9 +184,13 @@ public class FrmTest extends javax.swing.JInternalFrame {
                 .addComponent(chk5)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(chk6)
-                .addGap(13, 13, 13)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(chk7)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(chk8)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 40, Short.MAX_VALUE)
                 .addComponent(jButton1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(53, 53, 53))
         );
 
         pack();
@@ -182,6 +208,9 @@ public class FrmTest extends javax.swing.JInternalFrame {
 
     private void chk3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chk3ActionPerformed
         // TODO add your handling code here:
+        if(chk3.isSelected()==true){
+            llamarForm(3);
+        }
     }//GEN-LAST:event_chk3ActionPerformed
 
     private void chk4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chk4ActionPerformed
@@ -259,22 +288,118 @@ public class FrmTest extends javax.swing.JInternalFrame {
         obj.setVisible(true);
         this.setVisible(false);
     }
-    public void bloquearChk(int chk){
+    public void bloquearChk(int chk){ 
+        switch(chk){
+            case 1:
+                chk1.setSelected(false);
+                chk1.setEnabled(false);
+                break;
+            case 3:
+                chk3.setSelected(false);
+                chk3.setEnabled(false);
+                break;
+            case 7:
+                chk7.setSelected(false);
+                chk7.setEnabled(false);
+                break;
+            case 8:
+                chk8.setSelected(false);
+                chk8.setEnabled(false);
+                break;
+        }
+       
+        /*
         if(chk == 1){
             chk1.setSelected(false);
             chk1.setEnabled(false);
         }
-    }
-    
-    public void desbloquearChk(int chk){
-        if(chk == 1){
-            chk1.setSelected(true);
+        else{
+            if(chk == 3){
+                chk3.setSelected(false);
+                chk3.setEnabled(false);
+            }
+            else{
+                if(chk == 7){
+                    chk7.setSelected(false);
+                    chk7.setEnabled(false);
+                }
+                 else{
+                    if(chk == 8){
+                        chk8.setSelected(false);
+                        chk8.setEnabled(false);
+                    }
+                }
+            }
         }
+        */
+        
+        
+    }
+    public void desbloquearChk(int chk){
+              
+         switch(chk){
+            case 1:
+                chk1.setSelected(true);
+                chk1.setEnabled(false);
+                break;
+            case 3:
+                chk3.setSelected(true);
+                chk3.setEnabled(false);
+                break;
+            case 7:
+                chk7.setSelected(true);
+                chk7.setEnabled(false);
+                break;
+            case 8:
+                chk8.setSelected(true);
+                chk7.setEnabled(false);
+                break;          
+        }
+        
+         /*
+         if(chk == 1){
+            chk1.setSelected(true);
+            chk1.setEnabled(false);
+        }
+        else{
+            if(chk == 3){
+                chk3.setSelected(true);
+                chk3.setEnabled(false);
+            }
+            else{
+                if(chk == 7){
+                    chk7.setSelected(true);
+                    chk7.setEnabled(false);
+                }
+                 else{
+                    if(chk == 8){
+                        chk8.setSelected(true);
+                        chk8.setEnabled(false);
+                    }
+                }
+            }
+        }
+        */
+
     }
     
     private void chk1StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_chk1StateChanged
         // TODO add your handling code here:  
     }//GEN-LAST:event_chk1StateChanged
+
+    private void chk7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chk7ActionPerformed
+        // TODO add your handling code here:
+        if(chk7.isSelected()==true){
+            llamarForm(7);
+        }
+    }//GEN-LAST:event_chk7ActionPerformed
+
+    private void chk8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chk8ActionPerformed
+        // TODO add your handling code here:
+        if(chk8.isSelected()==true){
+            llamarForm(8);
+        }
+    }//GEN-LAST:event_chk8ActionPerformed
 
     
 
@@ -285,6 +410,8 @@ public class FrmTest extends javax.swing.JInternalFrame {
     private javax.swing.JCheckBox chk4;
     private javax.swing.JCheckBox chk5;
     private javax.swing.JCheckBox chk6;
+    private javax.swing.JCheckBox chk7;
+    private javax.swing.JCheckBox chk8;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;

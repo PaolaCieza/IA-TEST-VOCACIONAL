@@ -26,10 +26,11 @@ public class FrmPreguntas extends javax.swing.JInternalFrame {
     public void tipo(int valor){
         ImageIcon url;
         valorChk = valor;
+        int ejer;
         //VALOR INDICA SI ES DE MATEMÁTICA, VOCACIÓN, ETC
         switch (valor){
             case 1:
-                int ejer = (int) (Math.random() * 4) + 1; //INDICA CUÁL DE LAS 4 PREGUNTAS APARECE
+                ejer = (int) (Math.random() * 4) + 1; //INDICA CUÁL DE LAS 4 PREGUNTAS APARECE
 
                 url = new ImageIcon ("src\\imagenes\\Preguntas\\Mate\\"+ejer+".jpg");
                 System.out.println(url);
@@ -46,7 +47,53 @@ public class FrmPreguntas extends javax.swing.JInternalFrame {
                 if (ejer == 4){
                     rpta = "C";   
                 }
-            break;
+                break;
+            case 3:
+                url = new ImageIcon ("src\\imagenes\\Preguntas\\domhabla\\1.jpg");
+                System.out.println(url);
+                lblFoto.setIcon(url);
+                rpta= "B";
+                break;
+                
+            case 7:    
+                ejer = (int) (Math.random() * 4) + 1; //INDICA CUÁL DE LAS 4 PREGUNTAS APARECE
+
+                url = new ImageIcon ("src\\imagenes\\Preguntas\\vocabulario\\"+ejer+".PNG");
+                System.out.println(url);
+                lblFoto.setIcon(url);
+                if (ejer == 1){
+                    rpta = "C";   
+                }
+                if (ejer == 2){
+                    rpta = "A";   
+                }
+                if (ejer == 3){
+                    rpta = "C";   
+                }
+                if (ejer == 4){
+                    rpta = "C";   
+                }
+                break;
+            
+              case 8:    
+                ejer = (int) (Math.random() * 4) + 1; //INDICA CUÁL DE LAS 4 PREGUNTAS APARECE
+
+                url = new ImageIcon ("src\\imagenes\\Preguntas\\razonamiento\\"+ejer+".PNG");
+                System.out.println(url);
+                lblFoto.setIcon(url);
+                if (ejer == 1){
+                    rpta = "E";   
+                }
+                if (ejer == 2){
+                    rpta = "D";   
+                }
+                if (ejer == 3){
+                    rpta = "B";   
+                }
+                if (ejer == 4){
+                    rpta = "B";   
+                }
+                break;
         }
     }
 
@@ -78,23 +125,23 @@ public class FrmPreguntas extends javax.swing.JInternalFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(lblFoto, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(lblFoto, javax.swing.GroupLayout.DEFAULT_SIZE, 644, Short.MAX_VALUE)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(174, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(txtRpta, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btnEnviar)
-                .addGap(173, 173, 173))
+                .addGap(229, 229, 229))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(lblFoto, javax.swing.GroupLayout.PREFERRED_SIZE, 199, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addGap(31, 31, 31)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtRpta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnEnviar))
-                .addGap(0, 49, Short.MAX_VALUE))
+                .addGap(0, 40, Short.MAX_VALUE))
         );
 
         pack();
