@@ -1,4 +1,3 @@
-
 PREGUNTAS PARA ADMINISTRACIÓN
 
 --- toma de decisiones
@@ -10,6 +9,20 @@ PREGUNTAS PARA ADMINISTRACIÓN
 --- Informática (manejo de excel)
 --- Gerencia de personal
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% REGLAS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% opc(atencion,si) 			opc(atencion,no)
+% opc(hab_numerica,si) 		opc(hab_numerica,no) %%%%Se refiere a Estadistica, Economía, etc
+% opc(razonamiento,si) 		opc(razonamiento,no)
+% opc(vocabulario,si) 		opc(vocabulario,no)
+% opc(domhabla,si) 			opc(domhabla,no)
+% opc(espacial,si) 			opc(espacial,no)
+% opc(trabajo_equipo,si) 	opc(trabajo_equipo,no)
+% opc(idioma,si) 			opc(idioma,no)
+% opc(informatica,si) 		opc(informatica,no)
+% opc(potempresarial,si) 	opc(potempresarial,no)
+% opc(commprension,si) 		opc(commprension,no)
+% opc(matematica,si) 		opc(matematica,no)
+% opc(filosofia,si) 		opc(filosofia,no)
 
 :- dynamic
 	res/2,
@@ -25,6 +38,52 @@ perfil:-
     derecho;
 	educacion.
 
+administracion:-
+	opc(atencion,no);
+	opc(atencion,si),
+	opc(hab_numerica,si),
+	opc(razonamiento,no);
+	opc(razonamiento,si),
+	opc(vocabulario,no);
+	opc(vocabulario,si),
+	opc(domhabla,si),
+	opc(espacial,no);
+	opc(espacial,si),
+	opc(trabajo_equipo,si),
+	opc(idioma,si),
+	opc(informatica,si),
+	opc(potempresarial,si),
+    opc(commprension,no);
+	opc(commprension,si),
+	opc(matematica,si),
+	opc(filosofia,si);
+	opc(filosofia,no),
+	asserta(res(administracion,si)).
+	
+edsecundaria:-
+	opc(atencion,si),
+	opc(hab_numerica,si);
+	opc(hab_numerica,no),
+	opc(razonamiento,si);
+	opc(razonamiento,no),
+	opc(vocabulario,si),
+	opc(domhabla,si);
+	opc(espacial,si),
+	opc(trabajo_equipo,si);
+	opc(idioma,si);
+	opc(informatica,si);
+	opc(informatica,no),
+	opc(potempresarial,si);
+	opc(potempresarial,no),
+	opc(commprension,si),
+	opc(matematica,si);
+	opc(matematica,no),
+	opc(filosofia,si),
+	asserta(res(edsecundaria,si)).
+
+
+
+
 ingsistemas:-
 	opc(atencion,si),
 	opc(hab_numerica,si),
@@ -38,22 +97,6 @@ ingsistemas:-
 	opc(potempresarial,si),
     opc(commprension,si),
 	asserta(res(ingsistemas,si)).
-
-
-administracion:-
-	opc(atencion,no),
-    opc(matematica.si),
-	opc(hab_numerica,si),
-	opc(razonamiento,no),
-	opc(vocabulario,no),
-	opc(domhabla,si),
-	opc(espacial,no),
-	opc(trabajo_equipo,si),
-	opc(idioma,si),
-	opc(informatica,si),
-	opc(potempresarial,si),
-    opc(commprension,no),
-	asserta(res(administracion,si)).
 
 medicina:-
 	opc(atencion,si),
@@ -81,20 +124,6 @@ derecho:-
 	opc(potempresarial,si),
     opc(commprension,si),
 	asserta(res(derecho,si)).
-
-administracion:-
-	opc(atencion,no),
-	opc(hab_numerica,si),
-	opc(razonamiento,no),
-	opc(vocabulario,no),
-	opc(domhabla,si),
-	opc(espacial,no),
-	opc(trabajo_equipo,si),
-	opc(idioma,si),
-	opc(informatica,si),
-	opc(potempresarial,si),
-    opc(commprension,no),
-	asserta(res(administracion,si)).
 
 educacion:-
 	opc(atencion,si),
