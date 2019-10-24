@@ -1,0 +1,117 @@
+:- dynamic
+	res/2,
+	opc/2.
+
+opciones(X,Y):-
+	asserta(opc(X,Y)),
+	!.
+
+perfil:-
+	ingcivil,
+	ingamb,
+	ingindus,
+	contabilidad,
+	derecho,
+	medicina,
+	!.
+	
+ingcivil:-
+	opc(matematico,P),
+	P=si,
+	opc(domesp,Q),
+	Q=si,
+	opc(domhabla,R),
+	R=si,
+	opc(vocserv,S),
+	S=no,
+	opc(relinter,T),
+	T=si,
+	opc(mansw,U),
+	U=si,
+	asserta(res(ingcivil,si)),
+	!.
+
+ingindus:-
+	opc(matematico,P),
+	P=si,
+	opc(domesp,Q),
+	Q=no,
+	opc(domhabla,R),
+	R=si,
+	opc(vocserv,S),
+	S=no,
+	opc(relinter,T),
+	T=si,
+	opc(mansw,U),
+	U=si,
+	asserta(res(ingindus,si)),
+	!.
+
+medicina:-
+	opc(matematico,P),
+	P=si,
+	opc(domesp,Q),
+	Q=si,
+	opc(domhabla,R),
+	R=si,
+	opc(vocserv,S),
+	S=no,
+	opc(relinter,T),
+	T=si,
+	opc(mansw,U),
+	u=si,
+	asserta(res(medicina,si)),
+	!.
+
+ingamb:-
+	opc(matematico,P),
+	P=si,
+	opc(domesp,Q),
+	Q=si,
+	opc(domhabla,R),
+	R=si,
+	opc(vocserv,S),
+	S=no,
+	opc(relinter,T),
+	T=si,
+	opc(mansw,U),
+	U=no,
+	asserta(res(ingamb,si)),
+	!.
+
+contabilidad:-
+	opc(matematico,P),
+	P=si,
+	opc(domesp,Q),
+	Q=no,
+	opc(domhabla,R),
+	R=si,
+	opc(vocserv,S),
+	S=no,
+	opc(relinter,T),
+	T=si,
+	opc(mansw,U),
+	U=si,
+	asserta(res(contabilidad,si)),
+	!.
+
+derecho:-
+	opc(matematico,P),
+	P=no,
+	opc(domesp,Q),
+	Q=si,
+	opc(domhabla,R),
+	R=si,
+	opc(vocserv,S),
+	S=si,
+	opc(relinter,T),
+	T=si,
+	opc(mansw,U),
+	U=no,
+	asserta(res(derecho,si)),
+	!.
+	
+
+
+		
+
