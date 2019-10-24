@@ -21,6 +21,7 @@ public class JDPreguntas extends javax.swing.JDialog {
         initComponents();
     }
     String rpta; int valorChk;
+    boolean bloquear;
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -75,22 +76,35 @@ public class JDPreguntas extends javax.swing.JDialog {
     private void btnEnviarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEnviarActionPerformed
         // TODO add your handling code here:
         System.out.println(rpta);
-        //FrmTest obj = new FrmTest();
         if (!(txtRpta.getText().equalsIgnoreCase(rpta))){
+            JDTest.bloquearChk(valorChk);
+            txtRpta.setText("");
+            this.dispose();
+        }else{
+            JDTest.desbloquearChk(valorChk);
             //contenedor.add(obj);
             //FrmTest.setVisible(true);
-            JDTest.bloquearChk(valorChk);
+            //JDTest.bloquearChk(valorChk);
+            bloquear  = true;
             txtRpta.setText("");
             this.dispose();
         }else{
             //contenedor.add(obj);
             //obj.setVisible(true);
-            JDTest.desbloquearChk(valorChk);
+            //JDTest.desbloquearChk(valorChk);
+            bloquear=false;
             txtRpta.setText("");
             this.dispose();
         }
     }//GEN-LAST:event_btnEnviarActionPerformed
 
+    public int getRpta(){
+        return valorChk;
+    }
+    
+    public boolean getBloquear(){
+        return bloquear;
+    }
     /**
      * @param args the command line arguments
      */

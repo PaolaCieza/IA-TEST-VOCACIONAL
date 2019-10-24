@@ -54,7 +54,28 @@ public class FrmPreguntas extends javax.swing.JInternalFrame {
                 lblFoto.setIcon(url);
                 rpta= "B";
                 break;
-                
+            case 4:
+                ejer = (int) (Math.random() * 5) + 1; //INDICA CUÁL DE LAS 4 PREGUNTAS APARECE
+
+                url = new ImageIcon ("src\\imagenes\\Preguntas\\atencion\\"+ejer+".PNG");
+                System.out.println(url);
+                lblFoto.setIcon(url);
+                if (ejer == 1){
+                    rpta = "b";   
+                }
+                if (ejer == 2){
+                    rpta = "b";   
+                }
+                if (ejer == 3){
+                    rpta = "a";   
+                }
+                if (ejer == 4){
+                    rpta = "a";   
+                }
+                if (ejer == 5){
+                    rpta = "d";   
+                }
+                break;    
             case 7:    
                 ejer = (int) (Math.random() * 4) + 1; //INDICA CUÁL DE LAS 4 PREGUNTAS APARECE
 
@@ -92,6 +113,25 @@ public class FrmPreguntas extends javax.swing.JInternalFrame {
                 }
                 if (ejer == 4){
                     rpta = "B";   
+                }
+                break;
+            case 10:    
+                ejer = (int) (Math.random() * 4) + 1; //INDICA CUÁL DE LAS 4 PREGUNTAS APARECE
+
+                url = new ImageIcon ("src\\imagenes\\Preguntas\\hab_numerica\\"+ejer+".PNG");
+                System.out.println(url);
+                lblFoto.setIcon(url);
+                if (ejer == 1){
+                    rpta = "5";   
+                }
+                if (ejer == 2){
+                    rpta = "3";   
+                }
+                if (ejer == 3){
+                    rpta = "3";   
+                }
+                if (ejer == 4){
+                    rpta = "80";   
                 }
                 break;
         }

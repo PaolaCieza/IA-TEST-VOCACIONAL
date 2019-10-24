@@ -36,14 +36,17 @@
           <Group type="102" alignment="1" attributes="0">
               <Group type="103" groupAlignment="1" attributes="0">
                   <Group type="102" attributes="0">
-                      <EmptySpace max="32767" attributes="0"/>
-                      <Component id="jScrollPane1" min="-2" pref="325" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" attributes="0">
                       <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
                       <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="txtemail" pref="289" max="32767" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="1" attributes="0">
+                      <EmptySpace max="32767" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="jScrollPane1" pref="325" max="32767" attributes="0"/>
+                          <Component id="jButton3" max="32767" attributes="0"/>
+                      </Group>
                   </Group>
               </Group>
               <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
@@ -51,37 +54,37 @@
           <Group type="102" alignment="1" attributes="0">
               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="chk8" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Component id="chk4" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="chk13" min="-2" max="-2" attributes="0"/>
+                  <Component id="chk11" min="-2" max="-2" attributes="0"/>
+                  <Component id="chk10" min="-2" max="-2" attributes="0"/>
+                  <Component id="chk8" min="-2" max="-2" attributes="0"/>
+                  <Component id="chk7" min="-2" max="-2" attributes="0"/>
+                  <Component id="chk2" min="-2" max="-2" attributes="0"/>
+                  <Component id="chk1" min="-2" max="-2" attributes="0"/>
                   <Component id="chk3" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Component id="chk2" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Component id="chk1" alignment="0" min="-2" max="-2" attributes="0"/>
                   <Component id="chk5" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="chk6" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="chk12" alignment="0" min="-2" max="-2" attributes="0"/>
                   <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                      <Component id="chk7" alignment="0" max="32767" attributes="0"/>
-                      <Component id="chk6" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="chk4" alignment="0" max="32767" attributes="0"/>
+                      <Component id="chk9" alignment="0" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace min="-2" pref="118" max="-2" attributes="0"/>
-          </Group>
-          <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="162" max="-2" attributes="0"/>
-              <Component id="jButton3" min="-2" max="-2" attributes="0"/>
-              <EmptySpace max="32767" attributes="0"/>
+              <EmptySpace min="-2" pref="120" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="txtemail" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
               <Component id="jScrollPane1" min="-2" max="-2" attributes="0"/>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
               <Component id="chk1" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
               <Component id="chk2" min="-2" max="-2" attributes="0"/>
@@ -97,9 +100,19 @@
               <Component id="chk7" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
               <Component id="chk8" min="-2" max="-2" attributes="0"/>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="chk9" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="chk10" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="chk11" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="chk12" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="chk13" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
               <Component id="jButton3" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="50" max="32767" attributes="0"/>
+              <EmptySpace pref="12" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -132,59 +145,21 @@
         </Component>
       </SubComponents>
     </Container>
-    <Component class="javax.swing.JCheckBox" name="chk1">
+    <Component class="javax.swing.JCheckBox" name="chk12">
       <Properties>
         <Property name="text" type="java.lang.String" value="Matem&#xe1;tico"/>
       </Properties>
       <Events>
-        <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="chk1StateChanged"/>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="chk1ActionPerformed"/>
+        <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="chk12StateChanged"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="chk12ActionPerformed"/>
       </Events>
-      <AuxValues>
-        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="9"/>
-      </AuxValues>
-    </Component>
-    <Component class="javax.swing.JCheckBox" name="chk2">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Dominio espacial"/>
-      </Properties>
-      <AuxValues>
-        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="9"/>
-      </AuxValues>
-    </Component>
-    <Component class="javax.swing.JCheckBox" name="chk3">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Dominio del habla"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="chk3ActionPerformed"/>
-      </Events>
-      <AuxValues>
-        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="9"/>
-      </AuxValues>
-    </Component>
-    <Component class="javax.swing.JCheckBox" name="chk4">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Vocaci&#xf3;n de servicio"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="chk4ActionPerformed"/>
-      </Events>
-      <AuxValues>
-        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="9"/>
-      </AuxValues>
-    </Component>
-    <Component class="javax.swing.JCheckBox" name="chk5">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Relaciones interpersonales"/>
-      </Properties>
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="9"/>
       </AuxValues>
     </Component>
     <Component class="javax.swing.JCheckBox" name="chk6">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Manejo de software"/>
+        <Property name="text" type="java.lang.String" value="Dominio espacial"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="chk6ActionPerformed"/>
@@ -193,23 +168,45 @@
         <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="9"/>
       </AuxValues>
     </Component>
-    <Component class="javax.swing.JCheckBox" name="chk7">
+    <Component class="javax.swing.JCheckBox" name="chk5">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Buen vocabulario"/>
+        <Property name="text" type="java.lang.String" value="Dominio del habla"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="chk7ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="chk5ActionPerformed"/>
       </Events>
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="9"/>
       </AuxValues>
     </Component>
-    <Component class="javax.swing.JCheckBox" name="chk8">
+    <Component class="javax.swing.JCheckBox" name="chk9">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Manejo de software"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="chk9ActionPerformed"/>
+      </Events>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="9"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JCheckBox" name="chk4">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Buen vocabulario"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="chk4ActionPerformed"/>
+      </Events>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="9"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JCheckBox" name="chk3">
       <Properties>
         <Property name="text" type="java.lang.String" value="Razonamiento Matematico"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="chk8ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="chk3ActionPerformed"/>
       </Events>
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="9"/>
@@ -221,6 +218,62 @@
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton3ActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JCheckBox" name="chk1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Atenci&#xf3;n"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="chk1ActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JCheckBox" name="chk2">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Habilidad Num&#xe9;rica"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="chk2ActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JCheckBox" name="chk7">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Trabajo en equipo"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="chk7ActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JCheckBox" name="chk8">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Idiomas"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="chk8ActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JCheckBox" name="chk10">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Potencial Empresarial"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="chk10ActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JCheckBox" name="chk11">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Comprensi&#xf3;n"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="chk11ActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JCheckBox" name="chk13">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Filosof&#xed;a"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="chk13ActionPerformed"/>
       </Events>
     </Component>
   </SubComponents>
