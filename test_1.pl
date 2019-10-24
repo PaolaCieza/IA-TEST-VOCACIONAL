@@ -12,17 +12,17 @@ perfil:-
 	educacion.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% REGLAS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% opc(atencion,si) 			opc(atencion,no)
+% opc(atencion,si) 		opc(atencion,no)
 % opc(hab_numerica,si) 		opc(hab_numerica,no) %%%%Se refiere a Estadistica, Economía, etc
 % opc(razonamiento,si) 		opc(razonamiento,no)
 % opc(vocabulario,si) 		opc(vocabulario,no)
-% opc(domhabla,si) 			opc(domhabla,no)
-% opc(espacial,si) 			opc(espacial,no)
+% opc(domhabla,si) 		opc(domhabla,no)
+% opc(espacial,si) 		opc(espacial,no)
 % opc(trabajo_equipo,si) 	opc(trabajo_equipo,no)
-% opc(idiomas,si) 			opc(idiomas,no)
+% opc(idiomas,si) 		opc(idiomas,no)
 % opc(informatica,si) 		opc(informatica,no)
 % opc(potempresarial,si) 	opc(potempresarial,no)
-% opc(commprension,si) 		opc(commprension,no)
+% opc(comprension,si) 		opc(comprension,no)
 % opc(matematica,si) 		opc(matematica,no)
 % opc(filosofia,si) 		opc(filosofia,no)
 
@@ -41,8 +41,8 @@ administracion:-
 	opc(idiomas,si),
 	opc(informatica,si),
 	opc(potempresarial,si),
-    opc(commprension,no);
-	opc(commprension,si),
+    opc(comprension,no);
+	opc(comprension,si),
 	opc(matematica,si),
 	opc(filosofia,si);
 	opc(filosofia,no),
@@ -63,14 +63,14 @@ edsecundaria:-
 	opc(informatica,no),
 	opc(potempresarial,si);
 	opc(potempresarial,no),
-	opc(commprension,si),
+	opc(comprension,si),
 	opc(matematica,si);
 	opc(matematica,no),
 	opc(filosofia,si),
 	asserta(res(edsecundaria,si)).
 
 derecho:-
-	opc(commprension,si),	
+	opc(comprension,si),	
 	opc(hab_numerica,si),
 	opc(matematica.si),
 	opc(atencion,si),
@@ -85,7 +85,7 @@ derecho:-
 	asserta(res(derecho,si)).
 
 educacion:-
-	opc(commprension,si),	
+	opc(comprension,si),	
 	opc(hab_numerica,si),
 	opc(matematica.si),
 	opc(atencion,si),

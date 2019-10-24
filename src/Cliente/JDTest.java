@@ -48,15 +48,20 @@ public class JDTest extends javax.swing.JDialog {
         jLabel2 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
+        chk12 = new javax.swing.JCheckBox();
+        chk6 = new javax.swing.JCheckBox();
+        chk5 = new javax.swing.JCheckBox();
+        chk9 = new javax.swing.JCheckBox();
+        chk4 = new javax.swing.JCheckBox();
+        chk3 = new javax.swing.JCheckBox();
+        jButton3 = new javax.swing.JButton();
         chk1 = new javax.swing.JCheckBox();
         chk2 = new javax.swing.JCheckBox();
-        chk3 = new javax.swing.JCheckBox();
-        chk4 = new javax.swing.JCheckBox();
-        chk5 = new javax.swing.JCheckBox();
-        chk6 = new javax.swing.JCheckBox();
         chk7 = new javax.swing.JCheckBox();
         chk8 = new javax.swing.JCheckBox();
-        jButton3 = new javax.swing.JButton();
+        chk10 = new javax.swing.JCheckBox();
+        chk11 = new javax.swing.JCheckBox();
+        chk13 = new javax.swing.JCheckBox();
 
         jButton1.setText("ENVIAR");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -76,54 +81,50 @@ public class JDTest extends javax.swing.JDialog {
         jTextArea1.setText("Seleccione todos los adjetivos que \ndescriban su personalidad. Señale \ntantos como desee, trate de definirse \ntal como es, no como le gustaría ser.");
         jScrollPane1.setViewportView(jTextArea1);
 
-        chk1.setText("Matemático");
-        chk1.addChangeListener(new javax.swing.event.ChangeListener() {
+        chk12.setText("Matemático");
+        chk12.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
-                chk1StateChanged(evt);
+                chk12StateChanged(evt);
             }
         });
-        chk1.addActionListener(new java.awt.event.ActionListener() {
+        chk12.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                chk1ActionPerformed(evt);
+                chk12ActionPerformed(evt);
             }
         });
 
-        chk2.setText("Dominio espacial");
-
-        chk3.setText("Dominio del habla");
-        chk3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                chk3ActionPerformed(evt);
-            }
-        });
-
-        chk4.setText("Vocación de servicio");
-        chk4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                chk4ActionPerformed(evt);
-            }
-        });
-
-        chk5.setText("Relaciones interpersonales");
-
-        chk6.setText("Manejo de software");
+        chk6.setText("Dominio espacial");
         chk6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 chk6ActionPerformed(evt);
             }
         });
 
-        chk7.setText("Buen vocabulario");
-        chk7.addActionListener(new java.awt.event.ActionListener() {
+        chk5.setText("Dominio del habla");
+        chk5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                chk7ActionPerformed(evt);
+                chk5ActionPerformed(evt);
             }
         });
 
-        chk8.setText("Razonamiento Matematico");
-        chk8.addActionListener(new java.awt.event.ActionListener() {
+        chk9.setText("Manejo de software");
+        chk9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                chk8ActionPerformed(evt);
+                chk9ActionPerformed(evt);
+            }
+        });
+
+        chk4.setText("Buen vocabulario");
+        chk4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                chk4ActionPerformed(evt);
+            }
+        });
+
+        chk3.setText("Razonamiento Matematico");
+        chk3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                chk3ActionPerformed(evt);
             }
         });
 
@@ -134,6 +135,55 @@ public class JDTest extends javax.swing.JDialog {
             }
         });
 
+        chk1.setText("Atención");
+        chk1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                chk1ActionPerformed(evt);
+            }
+        });
+
+        chk2.setText("Habilidad Numérica");
+        chk2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                chk2ActionPerformed(evt);
+            }
+        });
+
+        chk7.setText("Trabajo en equipo");
+        chk7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                chk7ActionPerformed(evt);
+            }
+        });
+
+        chk8.setText("Idiomas");
+        chk8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                chk8ActionPerformed(evt);
+            }
+        });
+
+        chk10.setText("Potencial Empresarial");
+        chk10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                chk10ActionPerformed(evt);
+            }
+        });
+
+        chk11.setText("Comprensión");
+        chk11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                chk11ActionPerformed(evt);
+            }
+        });
+
+        chk13.setText("Filosofía");
+        chk13.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                chk13ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -141,42 +191,45 @@ public class JDTest extends javax.swing.JDialog {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 325, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
                         .addGap(36, 36, 36)
                         .addComponent(jLabel2)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txtemail, javax.swing.GroupLayout.DEFAULT_SIZE, 289, Short.MAX_VALUE)))
+                        .addComponent(txtemail, javax.swing.GroupLayout.DEFAULT_SIZE, 289, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 325, Short.MAX_VALUE)
+                            .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                 .addGap(39, 39, 39))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(chk13)
+                    .addComponent(chk11)
+                    .addComponent(chk10)
                     .addComponent(chk8)
-                    .addComponent(chk4)
-                    .addComponent(chk3)
+                    .addComponent(chk7)
                     .addComponent(chk2)
                     .addComponent(chk1)
+                    .addComponent(chk3)
                     .addComponent(chk5)
+                    .addComponent(chk6)
+                    .addComponent(chk12)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(chk7, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(chk6, javax.swing.GroupLayout.Alignment.LEADING)))
-                .addGap(118, 118, 118))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(162, 162, 162)
-                .addComponent(jButton3)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(chk4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(chk9, javax.swing.GroupLayout.Alignment.LEADING)))
+                .addGap(120, 120, 120))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(24, 24, 24)
+                .addGap(20, 20, 20)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
                     .addComponent(txtemail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                .addGap(15, 15, 15)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addGap(15, 15, 15)
                 .addComponent(chk1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(chk2)
@@ -192,26 +245,56 @@ public class JDTest extends javax.swing.JDialog {
                 .addComponent(chk7)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(chk8)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(chk9)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(chk10)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(chk11)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(chk12)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(chk13)
+                .addGap(15, 15, 15)
                 .addComponent(jButton3)
-                .addContainerGap(50, Short.MAX_VALUE))
+                .addContainerGap(12, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void chk1StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_chk1StateChanged
+    private void chk12StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_chk12StateChanged
         // TODO add your handling code here:
-    }//GEN-LAST:event_chk1StateChanged
+    }//GEN-LAST:event_chk12StateChanged
 
-    private void chk1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chk1ActionPerformed
+    private void chk12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chk12ActionPerformed
         // TODO add your handling code here:
-
-        if(chk1.isSelected()==true){
-            llamarForm(1);
+        if(chk12.isSelected()==true){
+            llamarForm(12);
         }
 
-    }//GEN-LAST:event_chk1ActionPerformed
+    }//GEN-LAST:event_chk12ActionPerformed
+
+    private void chk5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chk5ActionPerformed
+        // TODO add your handling code here:
+        if(chk5.isSelected()==true){
+            llamarForm(5);
+        }
+    }//GEN-LAST:event_chk5ActionPerformed
+
+    private void chk9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chk9ActionPerformed
+        // TODO add your handling code here:
+        if(chk9.isSelected()==true){
+            llamarForm(9);
+        }
+    }//GEN-LAST:event_chk9ActionPerformed
+
+    private void chk4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chk4ActionPerformed
+        // TODO add your handling code here:
+        if(chk4.isSelected()==true){
+            llamarForm(4);
+        }
+    }//GEN-LAST:event_chk4ActionPerformed
 
     private void chk3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chk3ActionPerformed
         // TODO add your handling code here:
@@ -220,28 +303,6 @@ public class JDTest extends javax.swing.JDialog {
         }
     }//GEN-LAST:event_chk3ActionPerformed
 
-    private void chk4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chk4ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_chk4ActionPerformed
-
-    private void chk6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chk6ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_chk6ActionPerformed
-
-    private void chk7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chk7ActionPerformed
-        // TODO add your handling code here:
-        if(chk7.isSelected()==true){
-            llamarForm(7);
-        }
-    }//GEN-LAST:event_chk7ActionPerformed
-
-    private void chk8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chk8ActionPerformed
-        // TODO add your handling code here:
-        if(chk8.isSelected()==true){
-            llamarForm(8);
-        }
-    }//GEN-LAST:event_chk8ActionPerformed
-
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
 
         int posAlumno = Registro.buscarAlumno(txtemail.getText());
@@ -249,34 +310,69 @@ public class JDTest extends javax.swing.JDialog {
         if (posAlumno !=-1) {
             Prolog.limpiezaprolog();
             if(chk1.isSelected()){
-                Prolog.insertaopc("matematico", "si");
+                Prolog.insertaopc("atencion", "si");
             }else{
-                Prolog.insertaopc("matematico", "no");
+                Prolog.insertaopc("atencion", "no");
             }
             if(chk2.isSelected()){
-                Prolog.insertaopc("domesp", "si");
+                Prolog.insertaopc("hab_numerica", "si");
             }else{
-                Prolog.insertaopc("domesp", "no");
+                Prolog.insertaopc("hab_numerica", "no");
             }
             if(chk3.isSelected()){
+                Prolog.insertaopc("razonamiento", "si");
+            }else{
+                Prolog.insertaopc("razonamiento", "no");
+            }
+            if(chk4.isSelected()){
+                Prolog.insertaopc("vocabulario", "si");
+            }else{
+                Prolog.insertaopc("vocabulario", "no");
+            }
+            if(chk5.isSelected()){
                 Prolog.insertaopc("domhabla", "si");
             }else{
                 Prolog.insertaopc("domhabla", "no");
             }
-            if(chk4.isSelected()){
-                Prolog.insertaopc("vocserv", "si");
-            }else{
-                Prolog.insertaopc("vocserv", "no");
-            }
-            if(chk5.isSelected()){
-                Prolog.insertaopc("relinter", "si");
-            }else{
-                Prolog.insertaopc("relinter", "no");
-            }
             if(chk6.isSelected()){
-                Prolog.insertaopc("mansw", "si");
+                Prolog.insertaopc("espacial", "si");
             }else{
-                Prolog.insertaopc("mansw", "no");
+                Prolog.insertaopc("espacial", "no");
+            }
+            if(chk7.isSelected()){
+                Prolog.insertaopc("trabajo_equipo", "si");
+            }else{
+                Prolog.insertaopc("trabajo_equipo", "no");
+            }
+            if(chk8.isSelected()){
+                Prolog.insertaopc("idiomas", "si");
+            }else{
+                Prolog.insertaopc("idiomas", "no");
+            }
+            if(chk9.isSelected()){
+                Prolog.insertaopc("informatica", "si");
+            }else{
+                Prolog.insertaopc("informatica", "no");
+            }
+            if(chk10.isSelected()){
+                Prolog.insertaopc("potempresarial", "si");
+            }else{
+                Prolog.insertaopc("potempresarial", "no");
+            }
+            if(chk11.isSelected()){
+                Prolog.insertaopc("comprension", "si");
+            }else{
+                Prolog.insertaopc("comprension", "no");
+            }
+            if(chk12.isSelected()){
+                Prolog.insertaopc("matematica", "si");
+            }else{
+                Prolog.insertaopc("matematica", "no");
+            }
+            if(chk13.isSelected()){
+                Prolog.insertaopc("filosofia", "si");
+            }else{
+                Prolog.insertaopc("filosofia", "no");
             }
             Prolog.reglas(txtemail.getText());
             JOptionPane.showMessageDialog(null, "TEST REGISTRADO", "MENSAJE DEL SISTEMA", JOptionPane.INFORMATION_MESSAGE);
@@ -297,28 +393,111 @@ public class JDTest extends javax.swing.JDialog {
         chk4.setSelected(false);
         chk5.setSelected(false);
         chk6.setSelected(false);
-
+        chk7.setSelected(false);
+        chk8.setSelected(false);
+        chk9.setSelected(false);
+        chk10.setSelected(false);
+        chk11.setSelected(false);
+        chk12.setSelected(false);
+        chk13.setSelected(false);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton3ActionPerformed
 
+    private void chk1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chk1ActionPerformed
+        // TODO add your handling code here:
+        if(chk1.isSelected()==true){
+            llamarForm(1);
+        }
+    }//GEN-LAST:event_chk1ActionPerformed
+
+    private void chk2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chk2ActionPerformed
+        // TODO add your handling code here:
+        if(chk2.isSelected()==true){
+            llamarForm(2);
+        }
+    }//GEN-LAST:event_chk2ActionPerformed
+
+    private void chk6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chk6ActionPerformed
+        // TODO add your handling code here:
+        if(chk6.isSelected()==true){
+            llamarForm(6);
+        }
+    }//GEN-LAST:event_chk6ActionPerformed
+
+    private void chk7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chk7ActionPerformed
+        // TODO add your handling code here:
+        if(chk7.isSelected()==true){
+            llamarForm(7);
+        }
+    }//GEN-LAST:event_chk7ActionPerformed
+
+    private void chk8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chk8ActionPerformed
+        // TODO add your handling code here:
+        if(chk8.isSelected()==true){
+            llamarForm(8);
+        }
+    }//GEN-LAST:event_chk8ActionPerformed
+
+    private void chk10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chk10ActionPerformed
+        // TODO add your handling code here:
+        if(chk10.isSelected()==true){
+            llamarForm(10);
+        }
+    }//GEN-LAST:event_chk10ActionPerformed
+
+    private void chk11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chk11ActionPerformed
+        // TODO add your handling code here:
+        if(chk11.isSelected()==true){
+            llamarForm(11);
+        }
+    }//GEN-LAST:event_chk11ActionPerformed
+
+    private void chk13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chk13ActionPerformed
+        // TODO add your handling code here:
+        if(chk13.isSelected()==true){
+            llamarForm(13);
+        }
+    }//GEN-LAST:event_chk13ActionPerformed
+
     private void llamarForm(int valor){
         obj.tipo(valor);
         //contenedor.add(obj);
         obj.setVisible(true);
-        
+        if(obj.getBloquear()){
+            bloquearChk(obj.getRpta());
+        }else{
+            desbloquearChk(obj.getRpta());
+        }
     }
-    public static void bloquearChk(int chk){ 
+    
+    public void bloquearChk(int chk){ 
         switch(chk){
             case 1:
                 chk1.setSelected(false);
                 chk1.setEnabled(false);
                 break;
+            case 2:
+                chk2.setSelected(false);
+                chk2.setEnabled(false);
+                break;
             case 3:
                 chk3.setSelected(false);
                 chk3.setEnabled(false);
+                break;
+            case 4:
+                JDTest.chk4.setSelected(false);
+                JDTest.chk4.setEnabled(false);
+                break;
+            case 5:
+                chk5.setSelected(false);
+                chk5.setEnabled(false);
+                break;
+            case 6:
+                chk6.setSelected(false);
+                chk6.setEnabled(false);
                 break;
             case 7:
                 chk7.setSelected(false);
@@ -328,19 +507,55 @@ public class JDTest extends javax.swing.JDialog {
                 chk8.setSelected(false);
                 chk8.setEnabled(false);
                 break;
+            case 9:
+                chk9.setSelected(false);
+                chk9.setEnabled(false);
+                break;
+            case 10:
+                chk10.setSelected(false);
+                chk10.setEnabled(false);
+                break;
+            case 11:
+                chk11.setSelected(false);
+                chk11.setEnabled(false);
+                break;
+            case 12:
+                chk12.setSelected(false);
+                chk12.setEnabled(false);
+                break;
+            case 13:
+                chk13.setSelected(false);
+                chk13.setEnabled(false);
+                break;
         }
 
     }
-    public static void desbloquearChk(int chk){
-              
-         switch(chk){
+    
+    public void desbloquearChk(int chk){
+        switch(chk){
             case 1:
                 chk1.setSelected(true);
                 chk1.setEnabled(false);
                 break;
+            case 2:
+                chk2.setSelected(true);
+                chk2.setEnabled(false);
+                break;
             case 3:
                 chk3.setSelected(true);
                 chk3.setEnabled(false);
+                break;
+            case 4:
+                JDTest.chk4.setSelected(true);
+                JDTest.chk4.setEnabled(false);
+                break;
+            case 5:
+                chk5.setSelected(true);
+                chk5.setEnabled(false);
+                break;
+            case 6:
+                chk6.setSelected(true);
+                chk6.setEnabled(false);
                 break;
             case 7:
                 chk7.setSelected(true);
@@ -349,7 +564,27 @@ public class JDTest extends javax.swing.JDialog {
             case 8:
                 chk8.setSelected(true);
                 chk8.setEnabled(false);
-                break;          
+                break;
+            case 9:
+                chk9.setSelected(true);
+                chk9.setEnabled(false);
+                break;
+            case 10:
+                chk10.setSelected(true);
+                chk10.setEnabled(false);
+                break;
+            case 11:
+                chk11.setSelected(true);
+                chk11.setEnabled(false);
+                break;
+            case 12:
+                chk12.setSelected(true);
+                chk12.setEnabled(false);
+                break;
+            case 13:
+                chk13.setSelected(true);
+                chk13.setEnabled(false);
+                break;         
         }
     }
   
@@ -361,14 +596,19 @@ public class JDTest extends javax.swing.JDialog {
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public static javax.swing.JCheckBox chk1;
-    public static javax.swing.JCheckBox chk2;
+    private javax.swing.JCheckBox chk1;
+    private javax.swing.JCheckBox chk10;
+    private javax.swing.JCheckBox chk11;
+    public static javax.swing.JCheckBox chk12;
+    private javax.swing.JCheckBox chk13;
+    private javax.swing.JCheckBox chk2;
     public static javax.swing.JCheckBox chk3;
     public static javax.swing.JCheckBox chk4;
     public static javax.swing.JCheckBox chk5;
     public static javax.swing.JCheckBox chk6;
-    public static javax.swing.JCheckBox chk7;
-    public static javax.swing.JCheckBox chk8;
+    private javax.swing.JCheckBox chk7;
+    private javax.swing.JCheckBox chk8;
+    public static javax.swing.JCheckBox chk9;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel2;
