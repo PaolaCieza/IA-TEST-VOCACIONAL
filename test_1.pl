@@ -7,8 +7,7 @@ opciones(X,Y):-
 
 perfil:-
 	administracion;
-    derecho;
-	edsecundaria;
+    	derecho;
 	educacion.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% REGLAS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -27,25 +26,20 @@ perfil:-
 % opc(filosofia,si) 		opc(filosofia,no)
 
 administracion:-
-	opc(atencion,no);
 	opc(atencion,si),
 	opc(hab_numerica,si),
-	opc(razonamiento,no);
-	opc(razonamiento,si),
-	opc(vocabulario,no);
+	opc(razonamiento,no),
 	opc(vocabulario,si),
 	opc(domhabla,si),
-	opc(espacial,no);
-	opc(espacial,si),
-	opc(trabajo_equipo,si),
-	opc(idiomas,si),
+	opc(espacial,no),
 	opc(informatica,si),
+	opc(idiomas,si),
+	opc(trabajo_equipo,no),
 	opc(potempresarial,si),
-    opc(commprension,no);
 	opc(commprension,si),
-	opc(matematica,si),
-	opc(filosofia,si);
+	opc(matematica,no),
 	opc(filosofia,no),
+	opc(plan,no),
 	asserta(res(administracion,si)).
 
 edsecundaria:-
@@ -67,35 +61,22 @@ edsecundaria:-
 	opc(matematica,si);
 	opc(matematica,no),
 	opc(filosofia,si),
+	opc(plan,no),
 	asserta(res(edsecundaria,si)).
 
 derecho:-
-	opc(commprension,si),	
-	opc(hab_numerica,si),
-	opc(matematica.si),
 	opc(atencion,si),
-	opc(domhabla,si),
-	opc(potempresarial,si),
-	opc(espacial,si),
-	opc(idiomas,si),
-	opc(informatica,si),
+	opc(hab_numerica,no),
 	opc(razonamiento,si),
-	opc(trabajo_equipo,si),
 	opc(vocabulario,si),
+	opc(domhabla,si),
+	opc(espacial,no),
+	opc(informatica,no),
+	opc(idiomas,no),
+	opc(potempresarial,no),
+	opc(commprension,si),
+	opc(matematica,no),
+	opc(filosofia,si),
+	opc(plan,si),
 	asserta(res(derecho,si)).
-
-educacion:-
-	opc(commprension,si),	
-	opc(hab_numerica,si),
-	opc(matematica.si),
-	opc(atencion,si),
-	opc(domhabla,si),
-	opc(potempresarial,si),
-	opc(espacial,si),
-	opc(idiomas,si),
-	opc(informatica,si),
-	opc(razonamiento,si),
-	opc(trabajo_equipo,si),
-	opc(vocabulario,si),
-	asserta(res(educacion,si)).
 

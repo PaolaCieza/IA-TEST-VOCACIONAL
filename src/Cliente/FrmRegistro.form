@@ -5,7 +5,7 @@
     <Property name="closable" type="boolean" value="true"/>
     <Property name="iconifiable" type="boolean" value="true"/>
     <Property name="maximizable" type="boolean" value="true"/>
-    <Property name="title" type="java.lang.String" value="Registro"/>
+    <Property name="title" type="java.lang.String" value=".: REGISTRO"/>
   </Properties>
   <SyntheticProperties>
     <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
@@ -48,7 +48,7 @@
     <Component class="javax.swing.JLabel" name="jLabel1">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\GUADALUPE\Desktop\Test_vocacional\src\imagenes\registro.JPG"/>
+          <Image iconType="3" name="/imagenes/registro.JPG"/>
         </Property>
       </Properties>
     </Component>

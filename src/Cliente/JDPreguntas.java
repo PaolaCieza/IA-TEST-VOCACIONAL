@@ -21,6 +21,7 @@ public class JDPreguntas extends javax.swing.JDialog {
         initComponents();
     }
     String rpta; int valorChk;
+    boolean bloquear;
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -35,7 +36,11 @@ public class JDPreguntas extends javax.swing.JDialog {
         btnEnviar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setTitle(".: Pregunta de TEST VOCACIONAL");
+        setBackground(new java.awt.Color(255, 255, 255));
 
+        lblFoto.setBackground(new java.awt.Color(255, 255, 255));
+        lblFoto.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblFoto.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
         btnEnviar.setText("Enviar");
@@ -50,23 +55,23 @@ public class JDPreguntas extends javax.swing.JDialog {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(lblFoto, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(243, Short.MAX_VALUE)
-                .addComponent(txtRpta, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(btnEnviar)
-                .addGap(229, 229, 229))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(226, 226, 226)
+                .addComponent(txtRpta, javax.swing.GroupLayout.DEFAULT_SIZE, 144, Short.MAX_VALUE)
+                .addGap(27, 27, 27)
+                .addComponent(btnEnviar, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(258, 258, 258))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(29, 29, 29)
-                .addComponent(lblFoto, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addGap(0, 0, 0)
+                .addComponent(lblFoto, javax.swing.GroupLayout.DEFAULT_SIZE, 427, Short.MAX_VALUE)
+                .addGap(22, 22, 22)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtRpta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnEnviar))
-                .addGap(0, 52, Short.MAX_VALUE))
+                    .addComponent(btnEnviar, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtRpta, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(20, 20, 20))
         );
 
         pack();
@@ -79,18 +84,27 @@ public class JDPreguntas extends javax.swing.JDialog {
         if (!(txtRpta.getText().equalsIgnoreCase(rpta))){
             //contenedor.add(obj);
             //FrmTest.setVisible(true);
-            JDTest.bloquearChk(valorChk);
+            //JDTest.bloquearChk(valorChk);
+            bloquear  = true;
             txtRpta.setText("");
             this.dispose();
         }else{
             //contenedor.add(obj);
             //obj.setVisible(true);
-            JDTest.desbloquearChk(valorChk);
+            //JDTest.desbloquearChk(valorChk);
+            bloquear=false;
             txtRpta.setText("");
             this.dispose();
         }
     }//GEN-LAST:event_btnEnviarActionPerformed
 
+    public int getRpta(){
+        return valorChk;
+    }
+    
+    public boolean getBloquear(){
+        return bloquear;
+    }
     /**
      * @param args the command line arguments
      */
@@ -101,32 +115,67 @@ public class JDPreguntas extends javax.swing.JDialog {
         //VALOR INDICA SI ES DE MATEMÁTICA, VOCACIÓN, ETC
         switch (valor){
             case 1:
-                ejer = (int) (Math.random() * 4) + 1; //INDICA CUÁL DE LAS 4 PREGUNTAS APARECE
+                ejer = (int) (Math.random() * 5) + 1; //INDICA CUÁL DE LAS 4 PREGUNTAS APARECE
 
-                url = new ImageIcon ("src\\imagenes\\Preguntas\\Mate\\"+ejer+".jpg");
+                url = new ImageIcon ("src\\imagenes\\Preguntas\\atencion\\"+ejer+".PNG");
                 System.out.println(url);
                 lblFoto.setIcon(url);
                 if (ejer == 1){
-                    rpta = "34";   
+                    rpta = "B";   
                 }
                 if (ejer == 2){
-                    rpta = "-3";   
+                    rpta = "B";   
                 }
                 if (ejer == 3){
-                    rpta = "10";   
+                    rpta = "A";   
                 }
                 if (ejer == 4){
-                    rpta = "C";   
+                    rpta = "A";   
+                }
+                if (ejer == 5){
+                    rpta = "D";   
+                }
+                break;
+            case 2:    
+                ejer = (int) (Math.random() * 4) + 1; //INDICA CUÁL DE LAS 4 PREGUNTAS APARECE
+
+                url = new ImageIcon ("src\\imagenes\\Preguntas\\hab_numerica\\"+ejer+".jpeg");
+                System.out.println(url);
+                lblFoto.setIcon(url);
+                if (ejer == 1){
+                    rpta = "5";   
+                }
+                if (ejer == 2){
+                    rpta = "3";   
+                }
+                if (ejer == 3){
+                    rpta = "3";   
+                }
+                if (ejer == 4){
+                    rpta = "80";   
                 }
                 break;
             case 3:
-                url = new ImageIcon ("src\\imagenes\\Preguntas\\domhabla\\1.jpg");
+                ejer = (int) (Math.random() * 4) + 1; //INDICA CUÁL DE LAS 4 PREGUNTAS APARECE
+
+                url = new ImageIcon ("src\\imagenes\\Preguntas\\razonamiento\\"+ejer+".PNG");
                 System.out.println(url);
                 lblFoto.setIcon(url);
-                rpta= "B";
-                break;
+                if (ejer == 1){
+                    rpta = "E";   
+                }
+                if (ejer == 2){
+                    rpta = "D";   
+                }
+                if (ejer == 3){
+                    rpta = "B";   
+                }
+                if (ejer == 4){
+                    rpta = "B";   
+                }
+                break;    
                 
-            case 7:    
+            case 4:    
                 ejer = (int) (Math.random() * 4) + 1; //INDICA CUÁL DE LAS 4 PREGUNTAS APARECE
 
                 url = new ImageIcon ("src\\imagenes\\Preguntas\\vocabulario\\"+ejer+".PNG");
@@ -145,24 +194,159 @@ public class JDPreguntas extends javax.swing.JDialog {
                     rpta = "C";   
                 }
                 break;
-            
-              case 8:    
+            case 5:
+                url = new ImageIcon ("src\\imagenes\\Preguntas\\domhabla\\1.jpg");
+                System.out.println(url);
+                lblFoto.setIcon(url);
+                rpta= "B";
+                break;
+            case 6:
                 ejer = (int) (Math.random() * 4) + 1; //INDICA CUÁL DE LAS 4 PREGUNTAS APARECE
 
-                url = new ImageIcon ("src\\imagenes\\Preguntas\\razonamiento\\"+ejer+".PNG");
+                url = new ImageIcon ("src\\imagenes\\Preguntas\\espacial\\"+ejer+".PNG");
                 System.out.println(url);
                 lblFoto.setIcon(url);
                 if (ejer == 1){
-                    rpta = "E";   
+                    rpta = "C";   
                 }
                 if (ejer == 2){
+                    rpta = "A";   
+                }
+                if (ejer == 3){
                     rpta = "D";   
+                }
+                if (ejer == 4){
+                    rpta = "A";   
+                }
+                break;
+           case 7:
+                ejer = (int) (Math.random() * 4) + 1; //INDICA CUÁL DE LAS 4 PREGUNTAS APARECE
+
+                url = new ImageIcon ("src\\imagenes\\Preguntas\\trabajo_equipo\\"+ejer+".PNG");
+                System.out.println(url);
+                lblFoto.setIcon(url);
+                if (ejer == 1){
+                    rpta = "C";   
+                }
+                if (ejer == 2){
+                    rpta = "A";   
                 }
                 if (ejer == 3){
                     rpta = "B";   
                 }
                 if (ejer == 4){
+                    rpta = "C";   
+                }
+                break;
+            case 8:
+                ejer = (int) (Math.random() * 4) + 1; //INDICA CUÁL DE LAS 4 PREGUNTAS APARECE
+
+                url = new ImageIcon ("src\\imagenes\\Preguntas\\idioma\\"+ejer+".PNG");
+                System.out.println(url);
+                lblFoto.setIcon(url);
+                if (ejer == 1){
+                    rpta = "A";   
+                }
+                if (ejer == 2){
+                    rpta = "A";   
+                }
+                if (ejer == 3){
                     rpta = "B";   
+                }
+                if (ejer == 4){
+                    rpta = "D";   
+                }
+                break;
+            case 9:
+                ejer = (int) (Math.random() * 4) + 1; //INDICA CUÁL DE LAS 4 PREGUNTAS APARECE
+
+                url = new ImageIcon ("src\\imagenes\\Preguntas\\informatica\\"+ejer+".PNG");
+                System.out.println(url);
+                lblFoto.setIcon(url);
+                if (ejer == 1){
+                    rpta = "A";   
+                }
+                if (ejer == 2){
+                    rpta = "C";   
+                }
+                if (ejer == 3){
+                    rpta = "A";   
+                }
+                if (ejer == 4){
+                    rpta = "A";   
+                }
+                break;
+            case 10:
+                ejer = (int) (Math.random() * 3) + 1; //INDICA CUÁL DE LAS 4 PREGUNTAS APARECE
+
+                url = new ImageIcon ("src\\imagenes\\Preguntas\\potempresarial\\"+ejer+".PNG");
+                System.out.println(url);
+                lblFoto.setIcon(url);
+                if (ejer == 1){
+                    rpta = "B";   
+                }
+                if (ejer == 2){
+                    rpta = "B";   
+                }
+                if (ejer == 3){
+                    rpta = "B";   
+                }
+                break;
+            case 11:
+                ejer = (int) (Math.random() * 4) + 1; //INDICA CUÁL DE LAS 4 PREGUNTAS APARECE
+
+                url = new ImageIcon ("src\\imagenes\\Preguntas\\comprension\\"+ejer+".PNG");
+                System.out.println(url);
+                lblFoto.setIcon(url);
+                if (ejer == 1){
+                    rpta = "C";   
+                }
+                if (ejer == 2){
+                    rpta = "D";   
+                }
+                if (ejer == 3){
+                    rpta = "D";   
+                }
+                if (ejer == 4){
+                    rpta = "D";   
+                }
+                break;
+            case 12:
+                ejer = (int) (Math.random() * 4) + 1; //INDICA CUÁL DE LAS 4 PREGUNTAS APARECE
+
+                url = new ImageIcon ("src\\imagenes\\Preguntas\\Mate\\"+ejer+".jpg");
+                System.out.println(url);
+                lblFoto.setIcon(url);
+                if (ejer == 1){
+                    rpta = "34";   
+                }
+                if (ejer == 2){
+                    rpta = "-3";   
+                }
+                if (ejer == 3){
+                    rpta = "10";   
+                }
+                if (ejer == 4){
+                    rpta = "C";   
+                }
+                break;
+            case 13:
+                ejer = (int) (Math.random() * 4) + 1; //INDICA CUÁL DE LAS 4 PREGUNTAS APARECE
+
+                url = new ImageIcon ("src\\imagenes\\Preguntas\\filosofia\\"+ejer+".PNG");
+                System.out.println(url);
+                lblFoto.setIcon(url);
+                if (ejer == 1){
+                    rpta = "2";   
+                }
+                if (ejer == 2){
+                    rpta = "1";   
+                }
+                if (ejer == 3){
+                    rpta = "1";   
+                }
+                if (ejer == 4){
+                    rpta = "3";   
                 }
                 break;
         }

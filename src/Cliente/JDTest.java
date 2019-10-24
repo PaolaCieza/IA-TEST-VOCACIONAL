@@ -48,15 +48,20 @@ public class JDTest extends javax.swing.JDialog {
         jLabel2 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
-        chk1 = new javax.swing.JCheckBox();
-        chk2 = new javax.swing.JCheckBox();
-        chk3 = new javax.swing.JCheckBox();
-        chk4 = new javax.swing.JCheckBox();
-        chk5 = new javax.swing.JCheckBox();
-        chk6 = new javax.swing.JCheckBox();
-        chk7 = new javax.swing.JCheckBox();
-        chk8 = new javax.swing.JCheckBox();
+        chkMatematica = new javax.swing.JCheckBox();
+        chkEspacial = new javax.swing.JCheckBox();
+        chkHabla = new javax.swing.JCheckBox();
+        chkSoftware = new javax.swing.JCheckBox();
+        chkVocabulario = new javax.swing.JCheckBox();
+        chkRazonamiento = new javax.swing.JCheckBox();
         jButton3 = new javax.swing.JButton();
+        chkAtencion = new javax.swing.JCheckBox();
+        chkHabilidadNum = new javax.swing.JCheckBox();
+        chkTrabajo = new javax.swing.JCheckBox();
+        chkIdiomas = new javax.swing.JCheckBox();
+        chk1Potencial = new javax.swing.JCheckBox();
+        chkComprension = new javax.swing.JCheckBox();
+        chkFilosofia = new javax.swing.JCheckBox();
 
         jButton1.setText("ENVIAR");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -66,6 +71,7 @@ public class JDTest extends javax.swing.JDialog {
         });
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setTitle(".: TEST VOCACIONAL");
 
         jLabel2.setText("E-mail:");
 
@@ -76,54 +82,50 @@ public class JDTest extends javax.swing.JDialog {
         jTextArea1.setText("Seleccione todos los adjetivos que \ndescriban su personalidad. Señale \ntantos como desee, trate de definirse \ntal como es, no como le gustaría ser.");
         jScrollPane1.setViewportView(jTextArea1);
 
-        chk1.setText("Matemático");
-        chk1.addChangeListener(new javax.swing.event.ChangeListener() {
+        chkMatematica.setText("Matemático");
+        chkMatematica.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
-                chk1StateChanged(evt);
+                chkMatematicaStateChanged(evt);
             }
         });
-        chk1.addActionListener(new java.awt.event.ActionListener() {
+        chkMatematica.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                chk1ActionPerformed(evt);
-            }
-        });
-
-        chk2.setText("Dominio espacial");
-
-        chk3.setText("Dominio del habla");
-        chk3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                chk3ActionPerformed(evt);
+                chkMatematicaActionPerformed(evt);
             }
         });
 
-        chk4.setText("Vocación de servicio");
-        chk4.addActionListener(new java.awt.event.ActionListener() {
+        chkEspacial.setText("Dominio espacial");
+        chkEspacial.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                chk4ActionPerformed(evt);
+                chkEspacialActionPerformed(evt);
             }
         });
 
-        chk5.setText("Relaciones interpersonales");
-
-        chk6.setText("Manejo de software");
-        chk6.addActionListener(new java.awt.event.ActionListener() {
+        chkHabla.setText("Dominio del habla");
+        chkHabla.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                chk6ActionPerformed(evt);
+                chkHablaActionPerformed(evt);
             }
         });
 
-        chk7.setText("Buen vocabulario");
-        chk7.addActionListener(new java.awt.event.ActionListener() {
+        chkSoftware.setText("Manejo de software");
+        chkSoftware.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                chk7ActionPerformed(evt);
+                chkSoftwareActionPerformed(evt);
             }
         });
 
-        chk8.setText("Razonamiento Matematico");
-        chk8.addActionListener(new java.awt.event.ActionListener() {
+        chkVocabulario.setText("Buen vocabulario");
+        chkVocabulario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                chk8ActionPerformed(evt);
+                chkVocabularioActionPerformed(evt);
+            }
+        });
+
+        chkRazonamiento.setText("Razonamiento Matematico");
+        chkRazonamiento.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                chkRazonamientoActionPerformed(evt);
             }
         });
 
@@ -134,6 +136,55 @@ public class JDTest extends javax.swing.JDialog {
             }
         });
 
+        chkAtencion.setText("Atención");
+        chkAtencion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                chkAtencionActionPerformed(evt);
+            }
+        });
+
+        chkHabilidadNum.setText("Habilidad Numérica");
+        chkHabilidadNum.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                chkHabilidadNumActionPerformed(evt);
+            }
+        });
+
+        chkTrabajo.setText("Trabajo en equipo");
+        chkTrabajo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                chkTrabajoActionPerformed(evt);
+            }
+        });
+
+        chkIdiomas.setText("Idiomas");
+        chkIdiomas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                chkIdiomasActionPerformed(evt);
+            }
+        });
+
+        chk1Potencial.setText("Potencial Empresarial");
+        chk1Potencial.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                chk1PotencialActionPerformed(evt);
+            }
+        });
+
+        chkComprension.setText("Comprensión");
+        chkComprension.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                chkComprensionActionPerformed(evt);
+            }
+        });
+
+        chkFilosofia.setText("Filosofía");
+        chkFilosofia.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                chkFilosofiaActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -141,106 +192,117 @@ public class JDTest extends javax.swing.JDialog {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 325, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
                         .addGap(36, 36, 36)
                         .addComponent(jLabel2)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txtemail, javax.swing.GroupLayout.DEFAULT_SIZE, 289, Short.MAX_VALUE)))
+                        .addComponent(txtemail, javax.swing.GroupLayout.DEFAULT_SIZE, 289, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 325, Short.MAX_VALUE)
+                            .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                 .addGap(39, 39, 39))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(chk8)
-                    .addComponent(chk4)
-                    .addComponent(chk3)
-                    .addComponent(chk2)
-                    .addComponent(chk1)
-                    .addComponent(chk5)
+                    .addComponent(chkFilosofia)
+                    .addComponent(chkComprension)
+                    .addComponent(chk1Potencial)
+                    .addComponent(chkIdiomas)
+                    .addComponent(chkTrabajo)
+                    .addComponent(chkHabilidadNum)
+                    .addComponent(chkAtencion)
+                    .addComponent(chkRazonamiento)
+                    .addComponent(chkHabla)
+                    .addComponent(chkEspacial)
+                    .addComponent(chkMatematica)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(chk7, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(chk6, javax.swing.GroupLayout.Alignment.LEADING)))
-                .addGap(118, 118, 118))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(162, 162, 162)
-                .addComponent(jButton3)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(chkVocabulario, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(chkSoftware, javax.swing.GroupLayout.Alignment.LEADING)))
+                .addGap(120, 120, 120))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(24, 24, 24)
+                .addGap(20, 20, 20)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
                     .addComponent(txtemail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                .addGap(15, 15, 15)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(chk1)
+                .addGap(15, 15, 15)
+                .addComponent(chkAtencion)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(chk2)
+                .addComponent(chkHabilidadNum)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(chk3)
+                .addComponent(chkRazonamiento)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(chk4)
+                .addComponent(chkVocabulario)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(chk5)
+                .addComponent(chkHabla)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(chk6)
+                .addComponent(chkEspacial)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(chk7)
+                .addComponent(chkTrabajo)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(chk8)
-                .addGap(18, 18, 18)
+                .addComponent(chkIdiomas)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(chkSoftware)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(chk1Potencial)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(chkComprension)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(chkMatematica)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(chkFilosofia)
+                .addGap(15, 15, 15)
                 .addComponent(jButton3)
-                .addContainerGap(50, Short.MAX_VALUE))
+                .addContainerGap(12, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void chk1StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_chk1StateChanged
+    private void chkMatematicaStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_chkMatematicaStateChanged
         // TODO add your handling code here:
-    }//GEN-LAST:event_chk1StateChanged
+    }//GEN-LAST:event_chkMatematicaStateChanged
 
-    private void chk1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chk1ActionPerformed
+    private void chkMatematicaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chkMatematicaActionPerformed
         // TODO add your handling code here:
-
-        if(chk1.isSelected()==true){
-            llamarForm(1);
+        if(chkMatematica.isSelected()==true){
+            llamarForm(12);
         }
 
-    }//GEN-LAST:event_chk1ActionPerformed
+    }//GEN-LAST:event_chkMatematicaActionPerformed
 
-    private void chk3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chk3ActionPerformed
+    private void chkHablaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chkHablaActionPerformed
         // TODO add your handling code here:
-        if(chk3.isSelected()==true){
+        if(chkHabla.isSelected()==true){
+            llamarForm(5);
+        }
+    }//GEN-LAST:event_chkHablaActionPerformed
+
+    private void chkSoftwareActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chkSoftwareActionPerformed
+        // TODO add your handling code here:
+        if(chkSoftware.isSelected()==true){
+            llamarForm(9);
+        }
+    }//GEN-LAST:event_chkSoftwareActionPerformed
+
+    private void chkVocabularioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chkVocabularioActionPerformed
+        // TODO add your handling code here:
+        if(chkVocabulario.isSelected()==true){
+            llamarForm(4);
+        }
+    }//GEN-LAST:event_chkVocabularioActionPerformed
+
+    private void chkRazonamientoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chkRazonamientoActionPerformed
+        // TODO add your handling code here:
+        if(chkRazonamiento.isSelected()==true){
             llamarForm(3);
         }
-    }//GEN-LAST:event_chk3ActionPerformed
-
-    private void chk4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chk4ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_chk4ActionPerformed
-
-    private void chk6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chk6ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_chk6ActionPerformed
-
-    private void chk7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chk7ActionPerformed
-        // TODO add your handling code here:
-        if(chk7.isSelected()==true){
-            llamarForm(7);
-        }
-    }//GEN-LAST:event_chk7ActionPerformed
-
-    private void chk8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chk8ActionPerformed
-        // TODO add your handling code here:
-        if(chk8.isSelected()==true){
-            llamarForm(8);
-        }
-    }//GEN-LAST:event_chk8ActionPerformed
+    }//GEN-LAST:event_chkRazonamientoActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
 
@@ -248,35 +310,70 @@ public class JDTest extends javax.swing.JDialog {
 
         if (posAlumno !=-1) {
             Prolog.limpiezaprolog();
-            if(chk1.isSelected()){
-                Prolog.insertaopc("matematico", "si");
+            if(chkAtencion.isSelected()){
+                Prolog.insertaopc("atencion", "si");
             }else{
-                Prolog.insertaopc("matematico", "no");
+                Prolog.insertaopc("atencion", "no");
             }
-            if(chk2.isSelected()){
-                Prolog.insertaopc("domesp", "si");
+            if(chkHabilidadNum.isSelected()){
+                Prolog.insertaopc("hab_numerica", "si");
             }else{
-                Prolog.insertaopc("domesp", "no");
+                Prolog.insertaopc("hab_numerica", "no");
             }
-            if(chk3.isSelected()){
+            if(chkRazonamiento.isSelected()){
+                Prolog.insertaopc("razonamiento", "si");
+            }else{
+                Prolog.insertaopc("razonamiento", "no");
+            }
+            if(chkVocabulario.isSelected()){
+                Prolog.insertaopc("vocabulario", "si");
+            }else{
+                Prolog.insertaopc("vocabulario", "no");
+            }
+            if(chkHabla.isSelected()){
                 Prolog.insertaopc("domhabla", "si");
             }else{
                 Prolog.insertaopc("domhabla", "no");
             }
-            if(chk4.isSelected()){
-                Prolog.insertaopc("vocserv", "si");
+            if(chkEspacial.isSelected()){
+                Prolog.insertaopc("espacial", "si");
             }else{
-                Prolog.insertaopc("vocserv", "no");
+                Prolog.insertaopc("espacial", "no");
             }
-            if(chk5.isSelected()){
-                Prolog.insertaopc("relinter", "si");
+            if(chkTrabajo.isSelected()){
+                Prolog.insertaopc("trabajo_equipo", "si");
             }else{
-                Prolog.insertaopc("relinter", "no");
+                Prolog.insertaopc("trabajo_equipo", "no");
             }
-            if(chk6.isSelected()){
-                Prolog.insertaopc("mansw", "si");
+            if(chkIdiomas.isSelected()){
+                Prolog.insertaopc("idiomas", "si");
             }else{
-                Prolog.insertaopc("mansw", "no");
+                Prolog.insertaopc("idiomas", "no");
+            }
+            if(chkSoftware.isSelected()){
+                Prolog.insertaopc("informatica", "si");
+            }else{
+                Prolog.insertaopc("informatica", "no");
+            }
+            if(chk1Potencial.isSelected()){
+                Prolog.insertaopc("potempresarial", "si");
+            }else{
+                Prolog.insertaopc("potempresarial", "no");
+            }
+            if(chkComprension.isSelected()){
+                Prolog.insertaopc("comprension", "si");
+            }else{
+                Prolog.insertaopc("comprension", "no");
+            }
+            if(chkMatematica.isSelected()){
+                Prolog.insertaopc("matematica", "si");
+            }else{
+                Prolog.insertaopc("matematica", "no");
+            }
+            if(chkFilosofia.isSelected()){
+                Prolog.insertaopc("filosofia", "si");
+            }else{
+                Prolog.insertaopc("filosofia", "no");
             }
             Prolog.reglas(txtemail.getText());
             JOptionPane.showMessageDialog(null, "TEST REGISTRADO", "MENSAJE DEL SISTEMA", JOptionPane.INFORMATION_MESSAGE);
@@ -291,65 +388,204 @@ public class JDTest extends javax.swing.JDialog {
         }
 
         txtemail.setText("");
-        chk1.setSelected(false);
-        chk2.setSelected(false);
-        chk3.setSelected(false);
-        chk4.setSelected(false);
-        chk5.setSelected(false);
-        chk6.setSelected(false);
-
+        chkAtencion.setSelected(false);
+        chkHabilidadNum.setSelected(false);
+        chkRazonamiento.setSelected(false);
+        chkVocabulario.setSelected(false);
+        chkHabla.setSelected(false);
+        chkEspacial.setSelected(false);
+        chkTrabajo.setSelected(false);
+        chkIdiomas.setSelected(false);
+        chkSoftware.setSelected(false);
+        chk1Potencial.setSelected(false);
+        chkComprension.setSelected(false);
+        chkMatematica.setSelected(false);
+        chkFilosofia.setSelected(false);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton3ActionPerformed
 
+    private void chkAtencionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chkAtencionActionPerformed
+        // TODO add your handling code here:
+        if(chkAtencion.isSelected()==true){
+            llamarForm(1);
+        }
+    }//GEN-LAST:event_chkAtencionActionPerformed
+
+    private void chkHabilidadNumActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chkHabilidadNumActionPerformed
+        // TODO add your handling code here:
+        if(chkHabilidadNum.isSelected()==true){
+            llamarForm(2);
+        }
+    }//GEN-LAST:event_chkHabilidadNumActionPerformed
+
+    private void chkEspacialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chkEspacialActionPerformed
+        // TODO add your handling code here:
+        if(chkEspacial.isSelected()==true){
+            llamarForm(6);
+        }
+    }//GEN-LAST:event_chkEspacialActionPerformed
+
+    private void chkTrabajoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chkTrabajoActionPerformed
+        // TODO add your handling code here:
+        if(chkTrabajo.isSelected()==true){
+            llamarForm(7);
+        }
+    }//GEN-LAST:event_chkTrabajoActionPerformed
+
+    private void chkIdiomasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chkIdiomasActionPerformed
+        // TODO add your handling code here:
+        if(chkIdiomas.isSelected()==true){
+            llamarForm(8);
+        }
+    }//GEN-LAST:event_chkIdiomasActionPerformed
+
+    private void chk1PotencialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chk1PotencialActionPerformed
+        // TODO add your handling code here:
+        if(chk1Potencial.isSelected()==true){
+            llamarForm(10);
+        }
+    }//GEN-LAST:event_chk1PotencialActionPerformed
+
+    private void chkComprensionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chkComprensionActionPerformed
+        // TODO add your handling code here:
+        if(chkComprension.isSelected()==true){
+            llamarForm(11);
+        }
+    }//GEN-LAST:event_chkComprensionActionPerformed
+
+    private void chkFilosofiaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chkFilosofiaActionPerformed
+        // TODO add your handling code here:
+        if(chkFilosofia.isSelected()==true){
+            llamarForm(13);
+        }
+    }//GEN-LAST:event_chkFilosofiaActionPerformed
+
     private void llamarForm(int valor){
         obj.tipo(valor);
         //contenedor.add(obj);
         obj.setVisible(true);
-        
+        if(obj.getBloquear()){
+            bloquearChk(obj.getRpta());
+        }else{
+            desbloquearChk(obj.getRpta());
+        }
     }
+    
     public static void bloquearChk(int chk){ 
         switch(chk){
             case 1:
-                chk1.setSelected(false);
-                chk1.setEnabled(false);
+                chkAtencion.setSelected(false);
+                chkAtencion.setEnabled(false);
+                break;
+            case 2:
+                chkHabilidadNum.setSelected(false);
+                chkHabilidadNum.setEnabled(false);
                 break;
             case 3:
-                chk3.setSelected(false);
-                chk3.setEnabled(false);
+                chkRazonamiento.setSelected(false);
+                chkRazonamiento.setEnabled(false);
+                break;
+            case 4:
+                chkVocabulario.setSelected(false);
+                chkVocabulario.setEnabled(false);
+                break;
+            case 5:
+                chkHabla.setSelected(false);
+                chkHabla.setEnabled(false);
+                break;
+            case 6:
+                chkEspacial.setSelected(false);
+                chkEspacial.setEnabled(false);
                 break;
             case 7:
-                chk7.setSelected(false);
-                chk7.setEnabled(false);
+                chkTrabajo.setSelected(false);
+                chkTrabajo.setEnabled(false);
                 break;
             case 8:
-                chk8.setSelected(false);
-                chk8.setEnabled(false);
+                chkIdiomas.setSelected(false);
+                chkIdiomas.setEnabled(false);
+                break;
+            case 9:
+                chkSoftware.setSelected(false);
+                chkSoftware.setEnabled(false);
+                break;
+            case 10:
+                chk1Potencial.setSelected(false);
+                chk1Potencial.setEnabled(false);
+                break;
+            case 11:
+                chkComprension.setSelected(false);
+                chkComprension.setEnabled(false);
+                break;
+            case 12:
+                chkMatematica.setSelected(false);
+                chkMatematica.setEnabled(false);
+                break;
+            case 13:
+                chkFilosofia.setSelected(false);
+                chkFilosofia.setEnabled(false);
                 break;
         }
 
     }
+    
     public static void desbloquearChk(int chk){
-              
-         switch(chk){
+        switch(chk){
             case 1:
-                chk1.setSelected(true);
-                chk1.setEnabled(false);
+                chkAtencion.setSelected(true);
+                chkAtencion.setEnabled(false);
+                break;
+            case 2:
+                chkHabilidadNum.setSelected(true);
+                chkHabilidadNum.setEnabled(false);
                 break;
             case 3:
-                chk3.setSelected(true);
-                chk3.setEnabled(false);
+                chkRazonamiento.setSelected(true);
+                chkRazonamiento.setEnabled(false);
+                break;
+            case 4:
+                chkVocabulario.setSelected(true);
+                chkVocabulario.setEnabled(false);
+                break;
+            case 5:
+                chkHabla.setSelected(true);
+                chkHabla.setEnabled(false);
+                break;
+            case 6:
+                chkEspacial.setSelected(true);
+                chkEspacial.setEnabled(false);
                 break;
             case 7:
-                chk7.setSelected(true);
-                chk7.setEnabled(false);
+                chkTrabajo.setSelected(true);
+                chkTrabajo.setEnabled(false);
                 break;
             case 8:
-                chk8.setSelected(true);
-                chk8.setEnabled(false);
-                break;          
+                chkIdiomas.setSelected(true);
+                chkIdiomas.setEnabled(false);
+                break;
+            case 9:
+                chkSoftware.setSelected(true);
+                chkSoftware.setEnabled(false);
+                break;
+            case 10:
+                chk1Potencial.setSelected(true);
+                chk1Potencial.setEnabled(false);
+                break;
+            case 11:
+                chkComprension.setSelected(true);
+                chkComprension.setEnabled(false);
+                break;
+            case 12:
+                chkMatematica.setSelected(true);
+                chkMatematica.setEnabled(false);
+                break;
+            case 13:
+                chkFilosofia.setSelected(true);
+                chkFilosofia.setEnabled(false);
+                break;         
         }
     }
   
@@ -361,14 +597,19 @@ public class JDTest extends javax.swing.JDialog {
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public static javax.swing.JCheckBox chk1;
-    public static javax.swing.JCheckBox chk2;
-    public static javax.swing.JCheckBox chk3;
-    public static javax.swing.JCheckBox chk4;
-    public static javax.swing.JCheckBox chk5;
-    public static javax.swing.JCheckBox chk6;
-    public static javax.swing.JCheckBox chk7;
-    public static javax.swing.JCheckBox chk8;
+    private static javax.swing.JCheckBox chk1Potencial;
+    private static javax.swing.JCheckBox chkAtencion;
+    private static javax.swing.JCheckBox chkComprension;
+    public static javax.swing.JCheckBox chkEspacial;
+    private static javax.swing.JCheckBox chkFilosofia;
+    private static javax.swing.JCheckBox chkHabilidadNum;
+    public static javax.swing.JCheckBox chkHabla;
+    private static javax.swing.JCheckBox chkIdiomas;
+    public static javax.swing.JCheckBox chkMatematica;
+    public static javax.swing.JCheckBox chkRazonamiento;
+    public static javax.swing.JCheckBox chkSoftware;
+    private static javax.swing.JCheckBox chkTrabajo;
+    public static javax.swing.JCheckBox chkVocabulario;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel2;

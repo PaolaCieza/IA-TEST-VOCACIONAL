@@ -21,6 +21,7 @@ public class FrmPrincipal extends javax.swing.JFrame {
         initComponents();
         Registro.leerexcelAlumnos();
         Test.leerexcelResultados();
+        this.setExtendedState(MAXIMIZED_BOTH);
     }
 
     /**
@@ -35,9 +36,9 @@ public class FrmPrincipal extends javax.swing.JFrame {
         contenedor = new javax.swing.JPanel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
-        jMenuItem1 = new javax.swing.JMenuItem();
-        jMenuItem2 = new javax.swing.JMenuItem();
-        jMenuItem3 = new javax.swing.JMenuItem();
+        jmiRegistrar = new javax.swing.JMenuItem();
+        jmiTest = new javax.swing.JMenuItem();
+        jmiResultados = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -54,29 +55,29 @@ public class FrmPrincipal extends javax.swing.JFrame {
 
         jMenu1.setText("Opciones");
 
-        jMenuItem1.setText("Registrar alumno");
-        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+        jmiRegistrar.setText("Registrar alumno");
+        jmiRegistrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem1ActionPerformed(evt);
+                jmiRegistrarActionPerformed(evt);
             }
         });
-        jMenu1.add(jMenuItem1);
+        jMenu1.add(jmiRegistrar);
 
-        jMenuItem2.setText("Test");
-        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+        jmiTest.setText("Test");
+        jmiTest.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem2ActionPerformed(evt);
+                jmiTestActionPerformed(evt);
             }
         });
-        jMenu1.add(jMenuItem2);
+        jMenu1.add(jmiTest);
 
-        jMenuItem3.setText("Resultados");
-        jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
+        jmiResultados.setText("Resultados");
+        jmiResultados.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem3ActionPerformed(evt);
+                jmiResultadosActionPerformed(evt);
             }
         });
-        jMenu1.add(jMenuItem3);
+        jMenu1.add(jmiResultados);
 
         jMenuBar1.add(jMenu1);
 
@@ -96,23 +97,23 @@ public class FrmPrincipal extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+    private void jmiRegistrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiRegistrarActionPerformed
         FrmRegistro obj = new FrmRegistro();
         contenedor.add(obj);
         obj.setVisible(true);
-    }//GEN-LAST:event_jMenuItem1ActionPerformed
+    }//GEN-LAST:event_jmiRegistrarActionPerformed
 
-    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+    private void jmiTestActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiTestActionPerformed
         JDTest obj = new JDTest(this, true);
         //contenedor.add(obj);
         obj.setVisible(true);
-    }//GEN-LAST:event_jMenuItem2ActionPerformed
+    }//GEN-LAST:event_jmiTestActionPerformed
 
-    private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
+    private void jmiResultadosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiResultadosActionPerformed
         FrmResultados obj = new FrmResultados();
         contenedor.add(obj);
         obj.setVisible(true);
-    }//GEN-LAST:event_jMenuItem3ActionPerformed
+    }//GEN-LAST:event_jmiResultadosActionPerformed
 
     /**
      * @param args the command line arguments
@@ -153,8 +154,8 @@ public class FrmPrincipal extends javax.swing.JFrame {
     public static javax.swing.JPanel contenedor;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JMenuItem jMenuItem1;
-    private javax.swing.JMenuItem jMenuItem2;
-    private javax.swing.JMenuItem jMenuItem3;
+    private javax.swing.JMenuItem jmiRegistrar;
+    private javax.swing.JMenuItem jmiResultados;
+    private javax.swing.JMenuItem jmiTest;
     // End of variables declaration//GEN-END:variables
 }

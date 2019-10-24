@@ -45,9 +45,9 @@ public class FrmRegistro extends javax.swing.JInternalFrame {
         setClosable(true);
         setIconifiable(true);
         setMaximizable(true);
-        setTitle("Registro");
+        setTitle(".: REGISTRO");
 
-        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\GUADALUPE\\Desktop\\Test_vocacional\\src\\imagenes\\registro.JPG")); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/registro.JPG"))); // NOI18N
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -145,7 +145,7 @@ public class FrmRegistro extends javax.swing.JInternalFrame {
             txtemail.setText("");
             txtpass.setText("");
             
-            FrmTest interfaz = new FrmTest();
+            JDTest interfaz = new JDTest(null, true);
             FrmPrincipal.contenedor.add(interfaz);
             this.setVisible(false);
             interfaz.toFront();

@@ -29,7 +29,7 @@ public class Prolog {
         /*Scanner teclado= new Scanner(System.in);
         String Y;
         */
-        String t3="consult('test.pl')";
+        String t3="consult('test_1.pl')";
         Query q3 = new Query(t3);
         System.out.println(t3+""+(q3.hasSolution()?"SatisfactoriaH":"instatisfactoria"));
         
@@ -74,24 +74,16 @@ public class Prolog {
             for (int i=0; i<accion.length; i++){
                 System.out.println("Sol:"+i+" "+accion[i]);
                 obj.setEmail(email);
-                if(accion[i].toString().equalsIgnoreCase("{X=medicina}")){
-                    obj.setResultado("Medicina");
+                if(accion[i].toString().equalsIgnoreCase("{X=administracion}")){
+                    obj.setResultado("Administración");
                 }
-                if(accion[i].toString().equalsIgnoreCase("{X=ingcivil}")){
-                    obj.setResultado("Ing. Civil");
-                }
-                if(accion[i].toString().equalsIgnoreCase("{X=ingamb}")){
-                    obj.setResultado("Ing. Ambiental");
+                if(accion[i].toString().equalsIgnoreCase("{X=edsecundaria}")){
+                    obj.setResultado("Educación Secundaria");
                 }
                 if(accion[i].toString().equalsIgnoreCase("{X=derecho}")){
                     obj.setResultado("Derecho");
                 }
-                if(accion[i].toString().equalsIgnoreCase("{X=contabilidad}")){
-                    obj.setResultado("Contabilidad");
-                }
-                if(accion[i].toString().equalsIgnoreCase("{X=ingindus}")){
-                    obj.setResultado("Ing. Industrial");
-                }
+                
                 obj.setFecha(objDate.toString());
 
                 Lista.listaResultado.addElement(obj);
@@ -111,7 +103,7 @@ public class Prolog {
     
     public static void insertaopc(String X, String Y){
         
-        String tl="consult('test.pl')";
+        String tl="consult('test_1.pl')";
         Query ql = new Query(tl);
         System.out.println(tl+""+(ql.hasSolution()?"Satisfactoria":"instatisfactoria"));
         
