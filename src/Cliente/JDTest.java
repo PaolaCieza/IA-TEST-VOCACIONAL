@@ -5,7 +5,6 @@
  */
 package Cliente;
 
-import static Cliente.FrmPrincipal.contenedor;
 import Negocio.Registro;
 import Negocio.Test;
 import java.awt.Checkbox;
@@ -20,19 +19,18 @@ import javax.swing.table.DefaultTableModel;
 import org.jpl7.Term;
 import prolog.Prolog;
 
+
 /**
  *
- * @author GUADALUPE
+ * @author USUARIO
  */
-public class FrmTest extends javax.swing.JInternalFrame {
-
-    /**
-     * Creates new form Frm_principal
-     */
-    
+public class JDTest extends javax.swing.JDialog {
     JDPreguntas obj = new JDPreguntas(null, true);
-        
-    public FrmTest() {
+    /**
+     * Creates new form JDTest
+     */
+    public JDTest(java.awt.Frame parent, boolean modal) {
+        super(parent, modal);
         initComponents();
     }
 
@@ -45,23 +43,38 @@ public class FrmTest extends javax.swing.JInternalFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jButton1 = new javax.swing.JButton();
+        txtemail = new javax.swing.JTextField();
+        jLabel2 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTextArea1 = new javax.swing.JTextArea();
         chk1 = new javax.swing.JCheckBox();
         chk2 = new javax.swing.JCheckBox();
         chk3 = new javax.swing.JCheckBox();
         chk4 = new javax.swing.JCheckBox();
         chk5 = new javax.swing.JCheckBox();
         chk6 = new javax.swing.JCheckBox();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
-        jButton1 = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
-        txtemail = new javax.swing.JTextField();
         chk7 = new javax.swing.JCheckBox();
         chk8 = new javax.swing.JCheckBox();
+        jButton3 = new javax.swing.JButton();
 
-        setClosable(true);
-        setIconifiable(true);
-        setMaximizable(true);
+        jButton1.setText("ENVIAR");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+
+        jLabel2.setText("E-mail:");
+
+        jTextArea1.setEditable(false);
+        jTextArea1.setColumns(20);
+        jTextArea1.setFont(new java.awt.Font("Sitka Small", 1, 13)); // NOI18N
+        jTextArea1.setRows(5);
+        jTextArea1.setText("Seleccione todos los adjetivos que \ndescriban su personalidad. Señale \ntantos como desee, trate de definirse \ntal como es, no como le gustaría ser.");
+        jScrollPane1.setViewportView(jTextArea1);
 
         chk1.setText("Matemático");
         chk1.addChangeListener(new javax.swing.event.ChangeListener() {
@@ -100,22 +113,6 @@ public class FrmTest extends javax.swing.JInternalFrame {
             }
         });
 
-        jTextArea1.setEditable(false);
-        jTextArea1.setColumns(20);
-        jTextArea1.setFont(new java.awt.Font("Sitka Small", 1, 13)); // NOI18N
-        jTextArea1.setRows(5);
-        jTextArea1.setText("Seleccione todos los adjetivos que \ndescriban su personalidad. Señale \ntantos como desee, trate de definirse \ntal como es, no como le gustaría ser.");
-        jScrollPane1.setViewportView(jTextArea1);
-
-        jButton1.setText("ENVIAR");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-
-        jLabel2.setText("E-mail:");
-
         chk7.setText("Buen vocabulario");
         chk7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -130,27 +127,30 @@ public class FrmTest extends javax.swing.JInternalFrame {
             }
         });
 
+        jButton3.setText("ENVIAR");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 325, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(36, 36, 36)
                         .addComponent(jLabel2)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txtemail))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 325, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap())
-            .addGroup(layout.createSequentialGroup()
-                .addGap(131, 131, 131)
-                .addComponent(jButton1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(txtemail, javax.swing.GroupLayout.DEFAULT_SIZE, 289, Short.MAX_VALUE)))
+                .addGap(39, 39, 39))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(0, 0, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(chk8)
                     .addComponent(chk4)
@@ -160,19 +160,23 @@ public class FrmTest extends javax.swing.JInternalFrame {
                     .addComponent(chk5)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                         .addComponent(chk7, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(chk6, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addGap(85, 85, 85))
+                        .addComponent(chk6, javax.swing.GroupLayout.Alignment.LEADING)))
+                .addGap(118, 118, 118))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(162, 162, 162)
+                .addComponent(jButton3)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(17, 17, 17)
+                .addGap(24, 24, 24)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
                     .addComponent(txtemail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(18, 18, 18)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(6, 6, 6)
+                .addGap(18, 18, 18)
                 .addComponent(chk1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(chk2)
@@ -188,22 +192,25 @@ public class FrmTest extends javax.swing.JInternalFrame {
                 .addComponent(chk7)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(chk8)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 40, Short.MAX_VALUE)
-                .addComponent(jButton1)
-                .addGap(53, 53, 53))
+                .addGap(18, 18, 18)
+                .addComponent(jButton3)
+                .addContainerGap(50, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-    
-    
+
+    private void chk1StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_chk1StateChanged
+        // TODO add your handling code here:
+    }//GEN-LAST:event_chk1StateChanged
+
     private void chk1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chk1ActionPerformed
         // TODO add your handling code here:
-        
+
         if(chk1.isSelected()==true){
             llamarForm(1);
         }
-       
+
     }//GEN-LAST:event_chk1ActionPerformed
 
     private void chk3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chk3ActionPerformed
@@ -221,10 +228,24 @@ public class FrmTest extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_chk6ActionPerformed
 
+    private void chk7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chk7ActionPerformed
+        // TODO add your handling code here:
+        if(chk7.isSelected()==true){
+            llamarForm(7);
+        }
+    }//GEN-LAST:event_chk7ActionPerformed
+
+    private void chk8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chk8ActionPerformed
+        // TODO add your handling code here:
+        if(chk8.isSelected()==true){
+            llamarForm(8);
+        }
+    }//GEN-LAST:event_chk8ActionPerformed
+
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        
+
         int posAlumno = Registro.buscarAlumno(txtemail.getText());
-        
+
         if (posAlumno !=-1) {
             Prolog.limpiezaprolog();
             if(chk1.isSelected()){
@@ -259,7 +280,7 @@ public class FrmTest extends javax.swing.JInternalFrame {
             }
             Prolog.reglas(txtemail.getText());
             JOptionPane.showMessageDialog(null, "TEST REGISTRADO", "MENSAJE DEL SISTEMA", JOptionPane.INFORMATION_MESSAGE);
-            
+
             FrmResultados interfaz = new FrmResultados();
             FrmPrincipal.contenedor.add(interfaz);
             this.setVisible(false);
@@ -268,9 +289,7 @@ public class FrmTest extends javax.swing.JInternalFrame {
         }else{
             JOptionPane.showMessageDialog(null, "ALUMNO NO REGISTRADO", "MENSAJE DEL SISTEMA", JOptionPane.ERROR_MESSAGE);
         }
-        
-        
-        
+
         txtemail.setText("");
         chk1.setSelected(false);
         chk2.setSelected(false);
@@ -278,15 +297,18 @@ public class FrmTest extends javax.swing.JInternalFrame {
         chk4.setSelected(false);
         chk5.setSelected(false);
         chk6.setSelected(false);
-        
-        
+
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton3ActionPerformed
 
     private void llamarForm(int valor){
         obj.tipo(valor);
         //contenedor.add(obj);
         obj.setVisible(true);
-        this.setVisible(false);
+        
     }
     public static void bloquearChk(int chk){ 
         switch(chk){
@@ -307,33 +329,7 @@ public class FrmTest extends javax.swing.JInternalFrame {
                 chk8.setEnabled(false);
                 break;
         }
-       
-        /*
-        if(chk == 1){
-            chk1.setSelected(false);
-            chk1.setEnabled(false);
-        }
-        else{
-            if(chk == 3){
-                chk3.setSelected(false);
-                chk3.setEnabled(false);
-            }
-            else{
-                if(chk == 7){
-                    chk7.setSelected(false);
-                    chk7.setEnabled(false);
-                }
-                 else{
-                    if(chk == 8){
-                        chk8.setSelected(false);
-                        chk8.setEnabled(false);
-                    }
-                }
-            }
-        }
-        */
-        
-        
+
     }
     public static void desbloquearChk(int chk){
               
@@ -352,55 +348,16 @@ public class FrmTest extends javax.swing.JInternalFrame {
                 break;
             case 8:
                 chk8.setSelected(true);
-                chk7.setEnabled(false);
+                chk8.setEnabled(false);
                 break;          
         }
-        
-         /*
-         if(chk == 1){
-            chk1.setSelected(true);
-            chk1.setEnabled(false);
-        }
-        else{
-            if(chk == 3){
-                chk3.setSelected(true);
-                chk3.setEnabled(false);
-            }
-            else{
-                if(chk == 7){
-                    chk7.setSelected(true);
-                    chk7.setEnabled(false);
-                }
-                 else{
-                    if(chk == 8){
-                        chk8.setSelected(true);
-                        chk8.setEnabled(false);
-                    }
-                }
-            }
-        }
-        */
-
     }
+  
     
-    private void chk1StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_chk1StateChanged
-        // TODO add your handling code here:  
-    }//GEN-LAST:event_chk1StateChanged
-
-    private void chk7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chk7ActionPerformed
-        // TODO add your handling code here:
-        if(chk7.isSelected()==true){
-            llamarForm(7);
-        }
-    }//GEN-LAST:event_chk7ActionPerformed
-
-    private void chk8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chk8ActionPerformed
-        // TODO add your handling code here:
-        if(chk8.isSelected()==true){
-            llamarForm(8);
-        }
-    }//GEN-LAST:event_chk8ActionPerformed
-
+    /**
+     * @param args the command line arguments
+     */
+   
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -413,6 +370,7 @@ public class FrmTest extends javax.swing.JInternalFrame {
     public static javax.swing.JCheckBox chk7;
     public static javax.swing.JCheckBox chk8;
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea jTextArea1;
