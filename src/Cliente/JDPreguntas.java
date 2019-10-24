@@ -75,16 +75,11 @@ public class JDPreguntas extends javax.swing.JDialog {
     private void btnEnviarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEnviarActionPerformed
         // TODO add your handling code here:
         System.out.println(rpta);
-        //FrmTest obj = new FrmTest();
         if (!(txtRpta.getText().equalsIgnoreCase(rpta))){
-            //contenedor.add(obj);
-            //FrmTest.setVisible(true);
             JDTest.bloquearChk(valorChk);
             txtRpta.setText("");
             this.dispose();
         }else{
-            //contenedor.add(obj);
-            //obj.setVisible(true);
             JDTest.desbloquearChk(valorChk);
             txtRpta.setText("");
             this.dispose();

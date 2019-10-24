@@ -306,7 +306,6 @@ public class JDTest extends javax.swing.JDialog {
 
     private void llamarForm(int valor){
         obj.tipo(valor);
-        //contenedor.add(obj);
         obj.setVisible(true);
         
     }
